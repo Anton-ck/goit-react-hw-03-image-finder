@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Overlay, ModalArea, ModalImg, CloseButton } from './Modal.styled';
 import { PureComponent } from 'react';
 import { VscChromeClose } from 'react-icons/vsc';
@@ -44,3 +45,8 @@ class Modal extends PureComponent {
 }
 
 export default Modal;
+
+Modal.propTypes = {
+  imageURL: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
