@@ -29,15 +29,11 @@ class Modal extends PureComponent {
     return (
       <Overlay onClick={this.handleBackDropClick}>
         <ModalArea>
-          <ModalImg
-            src={imageURL}
-            alt="Something img"
-            width="80%"
-            loading="lazy"
-          />
           <CloseButton type="submit" onClick={onClose}>
-            {ModalArea && <VscChromeClose size="34px" fill="#fff" />}
+            <VscChromeClose size="34px" fill="#fff" />
           </CloseButton>
+
+          <ModalImg src={imageURL} alt="Something img" width="100%" />
         </ModalArea>
       </Overlay>
     );

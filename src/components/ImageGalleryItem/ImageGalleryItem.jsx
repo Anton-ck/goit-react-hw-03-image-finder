@@ -3,12 +3,11 @@ import { Component } from 'react';
 import { GalleryItem, GalleryItemImage } from './ImageGalleryItem.styled';
 import Modal from 'components/Modal/Modal';
 
+
 class ImageGalleryItem extends Component {
   state = {
     showModal: false,
   };
-
-
 
   toogleModal = () => {
     this.setState(({ showModal }) => ({
@@ -29,6 +28,7 @@ class ImageGalleryItem extends Component {
             loading="lazy"
           />
         </GalleryItem>
+  
         {showModal && (
           <Modal imageURL={largeImageURL} onClose={this.toogleModal} />
         )}
